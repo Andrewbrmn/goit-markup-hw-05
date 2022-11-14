@@ -476,7 +476,7 @@
       }
 
 
-     /* Contacts */
+     /* Clients*/
 .clients{
   padding-top: 94px;
   background-color: var(--button-text-color);
@@ -510,7 +510,8 @@
         justify-content: center;
         fill: var(--icons-color);
         margin-right: 30px;
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
       }
       .nav-icon {
         width: 106px;
@@ -616,23 +617,24 @@ address {
 }
 
 
-.border {
+ .border-img {
   width: 44px;
   height: 44px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   margin-right: 10px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
    
 }
 
 .border-color {
   margin: 12px;
   fill: var(--button-text-color);
-  /* transition: backgroud-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+  transition: backgroud-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.border:hover{
+.border-img:hover{
   background-color: var(--accent-color);
 }
 
@@ -667,7 +669,8 @@ address {
         font-family: inherit;
         cursor: pointer;
         transition:  color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms   cubic-bezier(0.4, 0, 0.2, 1) ;
+        background-color 250ms   cubic-bezier(0.4, 0, 0.2, 1),
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1)  ;
       }
       .item1{
         padding: 6px 25px;
@@ -697,7 +700,9 @@ address {
       }
       
       /* work list */
-      
+      .works-list .link {
+        display: block;
+      }
       .work-list-title {
         margin-bottom: 4px;
       }
@@ -720,20 +725,24 @@ address {
         border: 1px solid #eeeeee;
         border-width: 0 1px 1px 1px;
         position: relative;
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
         
       }
+     
       
-      .works-list img{
+      /* .works-list img{
         display: block;
-      }
+      } */
       
-        .link:hover .work-list-about,
-        .link:focus .work-list-about{
+        .link:hover,
+        .link:focus{
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
       }
       .img-wrapper {
         position: relative;
         overflow: hidden;
+        display: block;
+       
       }
       
   
@@ -755,10 +764,9 @@ address {
         padding: 24px;
         transform: translateY(100%);
         transition:  transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
       }
-      .item3:hover .item-description,
-      .item3:focus .item-description {
+      .link:hover .item-description,
+      .link:focus .item-description {
         transform: translateY(0);
 
       }
