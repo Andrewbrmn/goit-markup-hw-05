@@ -45,6 +45,7 @@
         font-family: inherit;
       }
       
+      
       ul {
         list-style: none;
       }
@@ -734,10 +735,7 @@ address {
         display: block;
       } */
       
-        .link:hover,
-        .link:focus{
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-      }
+       
       .img-wrapper {
         position: relative;
         overflow: hidden;
@@ -770,6 +768,10 @@ address {
         transform: translateY(0);
 
       }
+      .link:hover .work-list-about,
+      .link:focus .work-list-about{
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
       /* modal */
       .modal {
         width: 528px;
